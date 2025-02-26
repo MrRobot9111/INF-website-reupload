@@ -1,0 +1,36 @@
+:root{
+    --h1_size: 48px;
+    --p_size: 1.25em;
+    --orange: #E35205;
+    --orange-nav-link: #ce4800;
+    --grey: #EEEEEE;
+    --h2_size: 30px;
+}
+
+@media screen and (max-width: 1920px) {
+    :root {
+        --h1_size: 42px; /* Reduced further for smaller screens */
+        --p_size: 1.1em; /* Slightly smaller paragraph size */
+        --h2_size: 28px; /* Adjust h2 size proportionally */
+    }
+}
+
+@media screen and (max-width: 1280px) {
+   :root{
+    --h1_size: 35px;
+    --p_size: 1.0em;
+ 
+   } 
+}
+/* Phone layout */
+@media screen and (max-width: 500px) {
+    :root {
+        --h1_size: 32px; /* Reduced further for smaller screens */
+        --p_size: 16px; /* Slightly smaller paragraph size */
+        --nav_size: 24px;
+        --h2_size: 28px; /* Adjust h2 size proportionally */
+        --tycho-nav-blue: #080C26;
+        --website-grey: #D2D2D2;
+        /* Line height and negative spacing from Figma should be added here */ 
+    }
+}

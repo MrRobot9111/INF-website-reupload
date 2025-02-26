@@ -1,0 +1,178 @@
+h1{
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 12%;
+}
+
+.pic-text{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    background-color: var(--grey) ;
+    border-radius: 40px;
+}
+
+#pic-text-samuel {
+    margin-bottom: 25px;
+    margin-left: 12%;
+}
+
+#pic-text-rebecka {
+    width: 60%;
+    margin-left: 26%;
+}
+
+#pic-samuel{
+    width: 70%;
+}
+
+#pic-rebecka{
+    width: 70%;
+}
+
+/* Causing trouble inside the nav-bar */
+
+.pic-text p {
+    margin-left: 50px;
+    margin-right: 50px; 
+}
+
+.information-section{
+    right: 0%;
+}
+
+/* General paragraph styling */
+.styled-paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#mobile-header {
+    display: none;
+}
+
+/* Just for testing */ 
+@media screen and (max-width: 1920px) {
+
+    .styled-paragraph {
+        overflow-y: auto;
+        padding-right: 40px;
+    }
+
+    .styled-paragraph span {
+        margin-bottom: 20px;
+    }
+
+    #pic-text-rebecka {
+        width: 60%;
+        margin-left: 26%;
+    }
+    #pic-text-samuel {
+        margin-bottom: 25px;
+        margin-left: 12%;
+    }
+
+}
+
+
+/* Laptop */ 
+@media screen and (max-width: 1280px) {
+    #pic-text-rebecka {
+        height: 30vh;
+        width: 70%;
+        margin-left: 22%;
+    }
+    #pic-text-samuel {
+        height: 30vh;
+        width: auto;
+        margin-bottom: 25px;
+        margin-left: 12%;
+        margin-right: 8%;
+    }
+
+    .pic-tex {
+        border-radius: 10px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .information-section {
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Horizontal alignment */
+        width: 100%; /* Ensure it doesn't exceed the viewport width */
+        box-sizing: border-box; /* Include padding and borders in width */
+        overflow-x: hidden; /* Prevent horizontal overflow */
+        margin: 0 auto; /* Center section if needed */
+    }
+
+    .styled-paragraph {
+        overflow-y: unset;
+        padding-right: 40px;
+    }
+
+    #mobile-header {
+        display: block;
+        margin-top: 25%;
+    }
+
+    #desktop-header {
+        display: none;
+    }
+
+    h1 {
+        margin-top: 10%;
+        margin-left: 6.5%;
+        margin-right: 0%;
+        align-self: self-start;
+    }
+
+    .pic-text p {
+        margin-left: 2.5%;
+        margin-right: 2.5%; 
+
+    }
+
+    .pic-text {
+        width: 90%;
+        margin-left: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #pic-text-samuel, #pic-text-rebecka {
+        height: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #pic-text-rebecka {
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+
+    #pic-rebecka {
+        background-image: url("../Images/rebecka_mobile.png");
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    #pic-samuel {
+        background-image: url("../Images/smaler-samuel.png");
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}

@@ -1,0 +1,173 @@
+
+
+.nav-bar{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    position: relative; /* Needed for positioning the ::after element */
+}
+
+.nav-bar a::after {
+    content: '';
+    position: absolute;
+    bottom: 17px; /* Distance from the text */
+    width: 0%; /* Start with 0% width */
+    height: 2px; /* Thickness */
+    background-color: var(--orange); /* Orange color for underline */
+    transform: scaleX(0); /* Hidden by default */
+    transform-origin: left;
+    transition: all 0.3s ease; /* Smooth animation for both hover and active states */
+}
+
+.nav-bar a:hover:not(#ctaLink)::after {
+    width: 100%; /* Extend underline width on hover */
+    transform: scaleX(1); /* Show the underline */
+}
+
+.underline-current-nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 17px; /* Distance from the text */
+    width: 30%; /* Full underline width for the current item */
+    height: 2px; /* Thickness */
+    background-color: var(--orange-nav-link); /* Orange color for underline */
+    transform: scaleX(1); /* Ensure it stays visible */
+    transform-origin: left;
+    transition: all 0.3s ease; /* Smooth animation */
+}
+
+.underline-current-nav-link {
+    color: var(--orange-nav-link);
+}
+
+
+#cta-button {
+    background-color: var(--orange); 
+    border: none;
+    color: white;
+    padding: 7px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#cta-button:hover {
+    background-color: #b84000
+}
+
+#cta-button:active {
+    background-color: #b84000
+}
+
+.nav-dropdown {
+    display: none;
+
+
+}
+
+@media screen AND (max-width: 1280px){
+.nav-bar{
+    margin-left:1% ;
+    gap: 3%;
+}
+}
+
+@media screen and (max-width: 500px) {
+    .nav-bar {
+        display: none;
+    }
+
+    /* Style the dropdown from the hamburger menu */
+    .nav-dropdown {
+        display: none;
+        position: relative; /* Establish stacking context */
+        left: 0;
+        width: 100vw; /* Full width of the viewport */
+        height: 100vh; /* Full height of the viewport */
+        background-color: white;
+        z-index: 5; /* Lower than the links */
+    }
+    
+    #nav-blue-triangle {
+        width: 99.9%;
+        height: 100%;
+        position: absolute; /* Ensure it is behind the links */
+        z-index: 0;
+    }
+    
+    .nav-dropdown-links {
+        position: relative;
+        z-index: 10; /* Higher than the triangle */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 2.5%;
+        margin-top: 5%;
+        height: 40vh;
+        width: 75%;
+        font-size: var(--nav_size);
+    }
+    
+    .nav-dropdown-links a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        position: relative;
+        z-index: 11; /* Ensure links stay above everything */
+    }
+
+    .grey-box {
+        background-color: var(--website-grey);
+        width: 200px;
+        height: 200px;
+        z-index: 10000;
+        position: absolute;
+        top: 45%;                  /* Move 50% down from the top of the screen */
+        left: 25%;                 /* Move 50% from the left of the screen */
+        transform: rotate(25deg);
+        border-radius: 20px;
+    }
+
+    #cta-button {
+        position: relative;        /* Position relative to its normal flow */
+        top: 40%;                  /* Move 50% down from its container */
+        left: 7.5%;                 /* Move 50% right from its container */
+        font-size: var(--nav_size);
+    }
+
+    .exit-icon {
+        width: 55px;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Adjust for the element's size to center exactly */
+        z-index: 10000;
+    }
+    
+    .nav-dropdown-links a:hover {
+        color: var(--orange);
+    }
+    
+
+}

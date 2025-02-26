@@ -1,0 +1,103 @@
+ .pic-text {
+   display: flex;
+   flex-direction: column;
+   background-color: var(--grey);
+   border-radius: 30px;
+   justify-self: center;
+   width: 70%;
+   height: auto;
+   margin: auto;
+ }
+
+ /* Problem with this styling in Firefox but not in Brave */
+ section {
+   margin: auto;
+   width: 50%;
+ }
+
+
+ #inrikting-text {
+   background: var(--grey);
+   margin-left: 2%;
+   margin-right: 2%;
+   border-radius: 30px;
+ }
+
+
+
+ h1 {
+   text-align: center;
+ }
+
+ @media screen and (max-width: 1280px) {
+    section {
+      width: 80%;
+    }
+
+    #inriktning-pic {
+      width: 50%;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      background-image: url("../Images/inriktning_laptop.png");
+    }
+
+    .pic-text {
+      flex-direction: row;
+      width: 100%;
+    }
+
+
+    .textContainer {
+      overflow-y: auto;
+    }
+
+
+ }
+
+ @media screen and (max-width: 500px) {
+
+  #h1-Inrikting {
+    margin-top: 25%;
+
+  }
+
+  #inriktning-pic {
+    width: 100%;
+    background-image: url("../Images/Inrikting.png");
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+  }
+
+   .pic-text {
+     width: 100%;
+     flex-direction: column;
+   }
+
+   section {
+     margin-top: 10%;
+     width: 94%;
+
+   }
+
+   .mobile-page-navigation{
+    margin-top:2px;
+   }
+
+   h1{
+    text-align: left;
+   }
+
+
+ }
+
+ @media screen and (min-width: 2000px) {
+
+   section {
+     width: 50%;
+   }
+
+   .pic-text {
+     width: 80%;
+   }
+
+ }
